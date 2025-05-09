@@ -1,0 +1,5 @@
+#!/usr/bin/env python3
+
+db.adminCommand('listDatabases').databases.forEach(function(database) {
+    print(database.name + "\t" + database.sizeOnDisk / (1024 * 1024 * 1024) + "GB");
+});
